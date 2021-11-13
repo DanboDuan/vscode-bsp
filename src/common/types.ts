@@ -75,44 +75,30 @@ export type BSPObject = { [key: string]: BSPAny };
  */
 export type BSPArray = BSPAny[];
 
-
-export namespace MessageType {
-    /** An error message. */
-    export const Error = 1;
-    /** A warning message. */
-    export const Warning = 2;
-    /** An information message. */
-    export const Info = 3;
-    /** A log message. */
-    export const Log = 4;
+export enum MessageType {
+    Error = 1,
+    Warning = 2,
+    Info = 3,
+    Log = 4,
 }
 
-export type MessageType = 1 | 2 | 3 | 4;
-
-
-export namespace BuildTargetEventKind {
+export enum BuildTargetEventKind {
     /** The build target is new. */
-    export const Created = 1;
+    Created = 1,
 
     /** The build target has changed. */
-    export const Changed = 2;
+    Changed = 2,
 
     /** The build target has been deleted. */
-    export const Deleted = 3;
+    Deleted = 3,
 }
 
-export type BuildTargetEventKind = 1 | 2 | 3;
-
-
-export namespace SourceItemKind {
+export enum SourceItemKind {
     /** The source item references a normal file.  */
-    export const File = 1;
+    File = 1,
     /** The source item references a directory. */
-    export const Directory = 2;
+    Directory = 2,
 }
-
-export type SourceItemKind = 1 | 2;
-
 
 export interface TaskId {
     /** A unique identifier */
@@ -126,56 +112,51 @@ export interface TaskId {
     parents?: String[];
 }
 
-export namespace StatusCode {
+export enum StatusCode {
     /** Execution was successful. */
-    export const Ok = 1;
+    Ok = 1,
     /** Execution failed. */
-    export const Error = 2;
+    Error = 2,
     /** Execution was cancelled. */
-    export const Cancelled = 3;
+    Cancelled = 3,
 }
 
-export type StatusCode = 1 | 2 | 3;
-
-export namespace TaskDataKind {
+export enum TaskDataKind {
     /** `data` field must contain a CompileTask object. */
-    export const CompileTask = "compile-task";
+    CompileTask = "compile-task",
 
     /** `data` field must contain a CompileReport object. */
-    export const CompileReport = "compile-report";
+    CompileReport = "compile-report",
 
     /** `data` field must contain a TestTask object. */
-    export const TestTask = "test-task";
+    TestTask = "test-task",
 
     /** `data` field must contain a TestReport object. */
-    export const TestReport = "test-report";
+    TestReport = "test-report",
 
     /** `data` field must contain a TestStart object. */
-    export const TestStart = "test-start";
+    TestStart = "test-start",
 
     /** `data` field must contain a TestFinish object. */
-    export const TestFinish = "test-finish";
+    TestFinish = "test-finish",
 }
 
-export namespace TestStatus {
+export enum TestStatus {
     /** The test passed successfully. */
-    export const Passed = 1;
+    Passed = 1,
 
     /** The test failed. */
-    export const Failed = 2;
+    Failed = 2,
 
     /** The test was marked as ignored. */
-    export const Ignored = 3;
+    Ignored = 3,
 
     /** The test execution was cancelled. */
-    export const Cancelled = 4;
+    Cancelled = 4,
 
     /** The was not included in execution. */
-    export const Skipped = 5;
+    Skipped = 5,
 }
-
-export type TestStatus = 1 | 2 | 3 | 4 | 5;
-
 
 
 export interface BuildTargetIdentifier {
@@ -183,26 +164,26 @@ export interface BuildTargetIdentifier {
     uri: URI;
 }
 
-export namespace BuildTargetDataKind {
+export enum BuildTargetDataKind {
     /** The `data` field contains a `ScalaBuildTarget` object. */
-    export const Scala = "scala";
+    Scala = "scala",
 
     /** The `data` field contains a `SbtBuildTarget` object. */
-    export const Sbt = "sbt";
+    Sbt = "sbt",
 }
 
-export namespace BuildTargetTag {
+export enum BuildTargetTag {
     /** Target contains re-usable functionality for downstream targets. May have any
      * combination of capabilities. */
-    export const Library = "library";
+    Library = "library",
 
     /** Target contains source code for producing any kind of application, may have
      * but does not require the `canRun` capability. */
-    export const Application = "application";
+    Application = "application",
 
     /** Target contains source code for testing purposes, may have but does not
      * require the `canTest` capability. */
-    export const Test = "test";
+    Test = "test",
 
     /** Target contains source code for integration testing purposes, may have
      * but does not require the `canTest` capability.
@@ -210,15 +191,15 @@ export namespace BuildTargetTag {
      * integration tests traditionally run slower compared to normal tests
      * and require more computing resources to execute.
      */
-    export const IntegrationTest = "integration-test";
+    IntegrationTest = "integration-test",
 
     /** Target contains source code to measure performance of a program, may have
      * but does not require the `canRun` build target capability.
      */
-    export const Benchmark = "benchmark";
+    Benchmark = "benchmark",
 
     /** Target should be ignored by IDEs. */
-    export const NoIDE = "no-ide";
+    NoIDE = "no-ide",
 
     /** Actions on the target such as build and test should only be invoked manually
      * and explicitly. For example, triggering a build on all targets in the workspace
@@ -228,7 +209,7 @@ export namespace BuildTargetTag {
      * that exists in Bazel, where targets with this tag have to be specified explicitly
      * on the command line.
      */
-    export const Manual = "manual";
+    Manual = "manual",
 }
 
 export interface BuildTargetCapabilities {
