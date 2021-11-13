@@ -4,3 +4,9 @@ node_modules/
 *.vsix
 *.tsbuildinfo
 package-lock.json
+lib/
+out/
+dist/
+npm-debug.log
+*.log
+*.tgz
