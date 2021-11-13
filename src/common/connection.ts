@@ -87,8 +87,8 @@ export interface ProtocolConnection {
      *
      * @param type the notification's type to send.
      */
-    sendNotification(type: NotificationType0): void;
-    sendNotification<RO>(type: ProtocolNotificationType0<RO>): void;
+    sendNotification(type: NotificationType0): Promise<void>;
+    sendNotification<RO>(type: ProtocolNotificationType0<RO>): Promise<void>;
 
     /**
      * Sends a notification.
@@ -96,15 +96,15 @@ export interface ProtocolConnection {
      * @param type the notification's type to send.
      * @param params the notification's parameters.
      */
-    sendNotification<P, RO>(type: ProtocolNotificationType<P, RO>, params?: P): void;
-    sendNotification<P>(type: NotificationType<P>, params?: P): void;
+    sendNotification<P, RO>(type: ProtocolNotificationType<P, RO>, params?: P): Promise<void>;
+    sendNotification<P>(type: NotificationType<P>, params?: P): Promise<void>;
 
     /**
      * Sends a notification.
      *
      * @param method the notification's method signature or the method name.
      */
-    sendNotification(method: MessageSignature | string): void;
+    sendNotification(method: MessageSignature | string): Promise<void>;
 
     /**
      * Sends a notification.
@@ -112,7 +112,7 @@ export interface ProtocolConnection {
      * @param method the notification's method signature or the method name.
      * @param params the notification's parameters.
      */
-    sendNotification(method: MessageSignature | string, params: any): void;
+    sendNotification(method: MessageSignature | string, params: any): Promise<void>;
 
     /**
      * Installs a notification handler.
@@ -154,7 +154,7 @@ export interface ProtocolConnection {
      * @param token the token to use
      * @param value the progress value
      */
-    sendProgress<P>(type: ProgressType<P>, token: string | number, value: P): void;
+    sendProgress<P>(type: ProgressType<P>, token: string | number, value: P): Promise<void>;
 
     /**
      * Enables tracing mode for the connection.
