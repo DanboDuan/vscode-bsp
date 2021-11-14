@@ -52,10 +52,10 @@ export interface ShowMessageParams {
     task?: TaskId;
 
     /** The request id that originated this notification. */
-    originId?: String;
+    originId?: string;
 
     /** The actual message. */
-    message: String;
+    message: string;
 }
 
 export interface LogMessageParams {
@@ -66,10 +66,10 @@ export interface LogMessageParams {
     task?: TaskId;
 
     /** The request id that originated this notification. */
-    originId?: String;
+    originId?: string;
 
     /** The actual message */
-    message: String;
+    message: string;
 }
 
 export namespace ShowMessageNotification {
@@ -91,14 +91,14 @@ export interface PublishDiagnosticsParams {
     buildTarget: BuildTargetIdentifier;
 
     /** The request id that originated this notification. */
-    originId?: String;
+    originId?: string;
 
     /** The diagnostics to be published by the client. */
     diagnostics: Diagnostic[];
 
     /** Whether the client should clear the previous diagnostics
      * mapped to the same `textDocument` and `buildTarget`. */
-    reset: Boolean;
+    reset: boolean;
 }
 
 export namespace PublishDiagnosticsNotification {
@@ -114,12 +114,12 @@ export interface TaskStartParams {
     eventTime?: Long;
 
     /** Message describing the task. */
-    message?: String;
+    message?: string;
 
     /** Kind of data to expect in the `data` field. If this field is not set, the kind of data is not specified.
      * Kind names for specific tasks like compile, test, etc are specified in the protocol.
      */
-    dataKind?: String;
+    dataKind?: string;
 
     /** Optional metadata about the task.
      * Objects for specific tasks like compile, test, etc are specified in the protocol.
@@ -141,7 +141,7 @@ export interface TaskProgressParams {
 
     /** Message describing the task progress.
      * Information about the state of the task at the time the event is sent. */
-    message?: String;
+    message?: string;
 
     /** If known, total amount of work units in this task. */
     total?: Long;
@@ -150,12 +150,12 @@ export interface TaskProgressParams {
     progress?: Long;
 
     /** Name of a work unit. For example, "files" or "tests". May be empty. */
-    unit?: String;
+    unit?: string;
 
     /** Kind of data to expect in the `data` field. If this field is not set, the kind of data is not specified.
      * Kind names for specific tasks like compile, test, etc are specified in the protocol.
      */
-    dataKind?: String;
+    dataKind?: string;
 
     /** Optional metadata about the task.
      * Objects for specific tasks like compile, test, etc are specified in the protocol.
@@ -175,7 +175,7 @@ export interface TaskFinishParams {
     eventTime?: Long;
 
     /** Message describing the finish event. */
-    message?: String;
+    message?: string;
 
     /** Task completion status. */
     status: StatusCode;
@@ -183,7 +183,7 @@ export interface TaskFinishParams {
     /** Kind of data to expect in the `data` field. If this field is not set, the kind of data is not specified.
      * Kind names for specific tasks like compile, test, etc are specified in the protocol.
      */
-    dataKind?: String;
+    dataKind?: string;
 
     /** Optional metadata about the task.
      * Objects for specific tasks like compile, test, etc are specified in the protocol.

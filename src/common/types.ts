@@ -57,14 +57,14 @@ export enum SourceItemKind {
 
 export interface TaskId {
     /** A unique identifier */
-    id: String;
+    id: string;
 
     /** The parent task ids, if any. A non-empty parents field means
      * this task is a sub-task of every parent task id. The child-parent
      * relationship of tasks makes it possible to render tasks in
      * a tree-like user interface or inspect what caused a certain task
      * execution. */
-    parents?: String[];
+    parents?: string[];
 }
 
 export enum StatusCode {
@@ -169,13 +169,13 @@ export enum BuildTargetTag {
 
 export interface BuildTargetCapabilities {
     /** This target can be compiled by the BSP server. */
-    canCompile: Boolean;
+    canCompile: boolean;
     /** This target can be tested by the BSP server. */
-    canTest: Boolean;
+    canTest: boolean;
     /** This target can be run by the BSP server. */
-    canRun: Boolean;
+    canRun: boolean;
     /** This target can be debugged by the BSP server. */
-    canDebug: Boolean;
+    canDebug: boolean;
 }
 export interface BuildTarget {
     /** The target’s unique identifier */
@@ -185,7 +185,7 @@ export interface BuildTarget {
      * May be presented in the user interface.
      * Should be unique if possible.
      * The id.uri is used if None. */
-    displayName?: String;
+    displayName?: string;
 
     /** The directory where this target belongs to. Multiple build targets are allowed to map
      * to the same base directory, and a build target is not required to have a base directory.
@@ -200,20 +200,20 @@ export interface BuildTarget {
      * Pre-defined tags are listed in `BuildTargetTag` but clients and servers
      * are free to define new tags for custom purposes.
      */
-    tags: String[];
+    tags: string[];
 
     /** The capabilities of this build target. */
     capabilities: BuildTargetCapabilities;
 
     /** The set of languages that this target contains.
      * The ID string for each language is defined in the LSP. */
-    languageIds: String[];
+    languageIds: string[];
 
     /** The direct upstream build target dependencies of this build target */
     dependencies: BuildTargetIdentifier[];
 
     /** Kind of data to expect in the `data` field. If this field is not set, the kind of data is not specified. */
-    dataKind?: String;
+    dataKind?: string;
 
     /** Language-specific metadata about this target.
      * See ScalaBuildTarget as an example. */
