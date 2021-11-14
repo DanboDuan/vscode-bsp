@@ -2,17 +2,20 @@ import { ProtocolRequestType, ProtocolRequestType0 } from "./messages";
 import {
     BuildTargetIdentifier,
     SourceItemKind,
-    URI,
-    ResponseError,
     BuildTarget,
-    TextDocumentIdentifier,
     Int,
     Long,
     StatusCode,
     TestStatus,
-    Location
+
 } from "./types";
 
+import {
+    TextDocumentIdentifier,
+    Location,
+    ResponseError,
+    URI,
+} from './internal'
 
 export interface InitializeBuildParams {
     /** Name of the client */

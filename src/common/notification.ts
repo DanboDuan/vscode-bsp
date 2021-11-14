@@ -2,14 +2,16 @@ import { ProtocolNotificationType } from "./messages";
 import {
     BuildTargetEventKind,
     BuildTargetIdentifier,
-    Diagnostic,
     Long,
     MessageType,
     StatusCode,
     TaskId,
-    TextDocumentIdentifier,
 } from "./types";
 
+import {
+    TextDocumentIdentifier,
+    Diagnostic,
+} from './internal'
 
 export interface DidChangeBuildTarget {
     changes: BuildTargetEvent[];

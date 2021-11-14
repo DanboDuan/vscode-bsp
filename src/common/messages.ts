@@ -3,7 +3,7 @@
  * Licensed under the MIT License. See License.txt in the project root for license information.
  * ------------------------------------------------------------------------------------------ */
 
-import { RequestType, RequestType0, NotificationType, NotificationType0, ProgressType, _EM, ParameterStructures } from './types';
+import { RequestType, RequestType0, NotificationType, NotificationType0, ProgressType, _EM, ParameterStructures } from './internal';
 
 export class RegistrationType<RO> {
 	/**
