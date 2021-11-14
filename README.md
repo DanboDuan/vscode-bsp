@@ -4,7 +4,7 @@ This npm module is a tool independent implementation of the build server protoco
 
 See [here](https://build-server-protocol.github.io/) for a detailed documentation on the build server protocol.
 
-Large of the code is just copied from [build server protocol]((https://build-server-protocol.github.io/)) and [VSCode Language Server - Protocol Module](https://github.com/microsoft/vscode-languageserver-node/tree/main/protocol)
+Large of the code is just copied from [build server protocol](https://build-server-protocol.github.io/) and [VSCode Language Server - Protocol Module](https://github.com/microsoft/vscode-languageserver-node/tree/main/protocol)
 
 ## Dependencies
 
