@@ -1,4 +1,4 @@
-import { ProtocolRequestType, ProtocolRequestType0 } from "./messages";
+import { ProtocolRequestType, ProtocolRequestType0 } from './messages';
 import {
     BuildTargetIdentifier,
     SourceItemKind,
@@ -8,14 +8,14 @@ import {
     StatusCode,
     TestStatus,
 
-} from "./types";
+} from './types';
 
 import {
     TextDocumentIdentifier,
     Location,
     ResponseError,
     URI,
-} from './internal'
+} from './internal';
 
 export interface InitializeBuildParams {
     /** Name of the client */

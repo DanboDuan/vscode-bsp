@@ -1,4 +1,4 @@
-import { integer, uinteger, decimal, URI } from './internal'
+import { integer, uinteger, decimal, URI } from './internal';
 
 export type Long = number;
 export declare namespace Long {

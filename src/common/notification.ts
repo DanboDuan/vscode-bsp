@@ -1,4 +1,4 @@
-import { ProtocolNotificationType } from "./messages";
+import { ProtocolNotificationType } from './messages';
 import {
     BuildTargetEventKind,
     BuildTargetIdentifier,
@@ -11,7 +11,7 @@ import {
 import {
     TextDocumentIdentifier,
     Diagnostic,
-} from './internal'
+} from './internal';
 
 export interface DidChangeBuildTarget {
     changes: BuildTargetEvent[];

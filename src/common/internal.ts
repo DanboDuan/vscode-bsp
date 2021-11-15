@@ -9,7 +9,7 @@ export {
     TextDocumentIdentifier,
     Diagnostic,
     Location
-} from 'vscode-languageserver-types'
+} from 'vscode-languageserver-types';
 
 export {
     Message,
