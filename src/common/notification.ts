@@ -1,4 +1,4 @@
-import { ProtocolNotificationType } from './messages';
+import { ProtocolNotificationType, ProtocolNotificationType0 } from './messages';
 import {
     BuildTargetEventKind,
     BuildTargetIdentifier,
@@ -34,7 +34,7 @@ export namespace BuildTargetChangedNotification {
 
 
 export namespace ExitBuildNotification {
-    export const type = new ProtocolNotificationType<void, void>('build/exit');
+    export const type = new ProtocolNotificationType0<void>('build/exit');
 }
 
 export interface InitializedBuildParams { }

@@ -132,7 +132,7 @@ export interface ReloadParams {
 
 
 export namespace ReloadRequest {
-    export const type = new ProtocolRequestType0<ReloadParams, never, void, void>('workspace/reload');
+    export const type = new ProtocolRequestType<ReloadParams, void, never, void, void>('workspace/reload');
 }
 
 export interface WorkspaceBuildTargetsParams { }
