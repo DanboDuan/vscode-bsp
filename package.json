@@ -2,7 +2,7 @@
 	"name": "vscode-bsp",
 	"displayName": "vscode-bsp",
 	"description": "VSCode Build Server Protocol implementation",
-	"version": "0.1.9",
+	"version": "0.1.10",
 	"publisher": "bob",
 	"repository": {
 		"type": "git",

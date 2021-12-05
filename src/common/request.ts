@@ -7,7 +7,6 @@ import {
     Long,
     StatusCode,
     TestStatus,
-
 } from './types';
 
 import {
@@ -372,12 +371,14 @@ export interface DebugSessionParams {
     /** A sequence of build targets affected by the debugging action. */
     targets: BuildTargetIdentifier[],
 
+    originId?: String;
+
     /** The kind of data to expect in the `data` field. */
-    dataKind: string;
+    dataKind?: string;
 
     /** Language-specific metadata for this execution.
      * See ScalaMainClass as an example. */
-    data: any;
+    data?: any;
 }
 
 export interface DebugSessionAddress {
@@ -540,6 +541,7 @@ export interface CleanCacheResult {
     message?: string;
     /** Indicates whether the clean cache request was performed or not. */
     cleaned: boolean;
+    originId?: string;
 }
 
 export namespace CleanCacheRequest {

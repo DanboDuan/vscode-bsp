@@ -6,5 +6,6 @@ export * from './messages';
 export { ProtocolConnection, createProtocolConnection } from './connection';
 export * from './request';
 export * from './notification';
+export * from './extensions';
 export * from 'vscode-jsonrpc';
 export * from 'vscode-languageserver-types';
