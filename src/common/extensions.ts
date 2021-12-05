@@ -16,5 +16,5 @@ export interface JvmBuildTarget {
 
     /** The java version this target is supposed to use.
      * For example: 1.8 */
-    javaVersion?: String;
+    javaVersion?: string;
 }

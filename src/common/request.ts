@@ -371,7 +371,7 @@ export interface DebugSessionParams {
     /** A sequence of build targets affected by the debugging action. */
     targets: BuildTargetIdentifier[],
 
-    originId?: String;
+    originId?: string;
 
     /** The kind of data to expect in the `data` field. */
     dataKind?: string;
